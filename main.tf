@@ -1,0 +1,23 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=2.46.0"
+    }
+  }
+}
+
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+  features {}
+}
+
+terraform {
+  backend "remote" {
+    organization = "edogbe-aws-dev"
+
+    workspaces {
+      name = "tfc-aws-us-east"
+    }
+  }
+}
