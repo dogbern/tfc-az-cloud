@@ -12,3 +12,8 @@ variable "app_service_name" {
   description = "The app service name"
   type        = string
 }
+
+variable "location" {
+  description = "Location for the app"
+  type        = string
+}
